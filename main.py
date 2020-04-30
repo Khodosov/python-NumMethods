@@ -128,9 +128,24 @@ def seidel(matrix, b, accuracy, n):
     # матрицы (matrix)
     # matrix_L - матрица, которая содержит элементы исходной, стоящие под главной диагональю
     # matrix_U - матрица, которая содержит элементы исходной, стоящие над главной диагональю
+
     matrix_D = np.zeros((n, n))
-    matrix_L = np.zeros((n, n))
-    matrix_U = np.zeros((n, n))
+    for i in range(n):
+        matrix_D[i, i] = matrix[i, i]
+    matrix_L = np.tril(matrix) - matrix_D
+    matrix_U = np.triu(matrix) - matrix_D
+    x_previous = np.zeros((n, 1))
+    # Одну итеррацию вне цикла, чтобы запустить сам цикл
+    x_current = ((np.linalg.inv(matrix_L + matrix_D)).dot(-1 * matrix_U.dot(x_previous))) + (
+        np.linalg.inv(matrix_L + matrix_D).dot(b))
+    norma = 10000
+    while norma > accuracy:
+        x_current = ((np.linalg.inv(matrix_L + matrix_D)).dot(-1 * matrix_U.dot(x_previous))) + (
+            np.linalg.inv(matrix_L + matrix_D).dot(b))
+        norma = np.linalg.norm(x_current - x_previous)
+        x_previous = np.copy(x_current)
+
+    return x_current
 
 
 # =====
@@ -177,3 +192,5 @@ print("==== x ===========================================================" + "\n
 # =====
 # № 4
 # =====
+accuracy = 1e-12
+print("==== Метод Зейделя ===============================================" + "\n", seidel(matrix, b, accuracy, size))
