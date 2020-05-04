@@ -10,11 +10,17 @@ import numpy as np
 # matrix_Q - матрица Q из QR разложения
 
 # Здесь мы зададим размерность матрицы
-size = 3
+size = 5
 
 
 def matrix_generation(n):
     return np.random.randint(0, 10, (n, n)).astype(np.float32)
+
+
+def singular_matrix_generation(n):
+    matr = matrix_generation(n)
+    matr[1, :] = 2 * matr[0, :]
+    return matr
 
 
 def generation_matrix_diag_pred(n):
@@ -37,6 +43,24 @@ def swap_rows(matrix, k, n):
     matr[n, :] = matr[k, :]
     matr[k, :] = matrix[n, :]
     return matr
+
+
+def swap_columns(matrix, k, n):
+    matr = np.copy(matrix)
+    matr[:, n] = matr[:, k]
+    matr[:, k] = matrix[:, n]
+    return matr
+
+
+def swap_columns2(your_list, pos1, pos2):
+    for item in your_list:
+        item[pos1], item[pos2] = item[pos2], item[pos1]
+
+
+def swap_rows2(input_array, row1, row2):
+    temp = np.copy(input_array[row1][:])
+    input_array[row1][:] = input_array[row2][:]
+    input_array[row2][:] = temp
 
 
 def det_U(matrix, size, swaps):
@@ -215,38 +239,102 @@ def jacobi(matrix, b, accuracy, n):
 
 
 def decompose_PAQ_LU(matrix, n):
-    matrix_c = np.copy(matrix)
-
     swaps = 0
+    matrix_c = np.copy(matrix)
     matrix_p = np.eye(n)
     matrix_q = np.eye(n)
-    matrix_l = np.zeros((n, n))
 
     for i in range(n):
-        pivot = -1
-        pivotValue = np.fabs(matrix_c[i, i])
-        for row in range(i + 1, n):
-            if np.fabs(matrix_c[row, i]) > pivotValue:
-                pivotValue = np.fabs(matrix_c[row, i])
-                pivot = row
-        if pivot != -1:
-            swaps += 1
-            matrix_c = swap_rows(matrix_c, pivot, i)
-            matrix_p = swap_rows(matrix_p, pivot, i)
-            matrix_l = swap_rows(matrix_l, pivot, i)
-        matrix_l[i, i] = 1
-        for j in range(i + 1, n):
-            coeff = matrix_c[j, i] / matrix_c[i, i]
-            matrix_l[j, i] = coeff
-            for k in range(i, n):
-                matrix_c[j, k] -= coeff * matrix_c[i, k]
+        pivotValue = 0
+        pivot1 = -1
+        pivot2 = -1
+        for row in range(n)[i:n]:
+            for column in range(n)[i:n]:
+                if np.fabs(matrix_c[row][column]) > pivotValue:
+                    pivotValue = np.fabs(matrix_c[row][column])
+                    pivot1 = row
+                    pivot2 = column
+        if pivotValue != 0:
+            if pivot1 != i:
+                swaps += 1
+                swap_rows2(matrix_p, pivot1, i)
+                swap_rows2(matrix_c, pivot1, i)
+            if pivot2 != i:
+                swaps += 1
+                swap_columns2(matrix_q, pivot2, i)
+                swap_columns2(matrix_c, pivot2, i)
+            for j in range(n)[i + 1:n]:
+                matrix_c[j][i] /= matrix_c[i][i]
+                for s in range(n)[i + 1:n]:
+                    matrix_c[j][s] -= matrix_c[j][i] * matrix_c[i][s]
 
-    matrix_u = matrix_c
-    return matrix_u, matrix_l, matrix_p, matrix_q, swaps
+    matrix_l = np.tril(np.array(matrix_c), -1) + np.identity(n)
+    matrix_u = np.triu(np.array(matrix_c), 0)
+    return matrix_l, matrix_u, matrix_p, matrix_q, swaps
+
+
+def rank(matrix, n):
+    rank = n
+    for row in range(n):
+        if zeros(matrix[n - 1 - row], n):
+            rank -= 1
+        else:
+            break
+    return rank
+
+
+def zeros(row, n):
+    for i in range(n):
+        if abs(row[i]) - 0.0000001 > 0:
+            return False
+    return True
+
+
+# Для совместной
+def system_solution_2(matrix_l, matrix_u, n, b, matrix_p, matrix_q):
+    res_x = np.zeros((n, 1))
+    b = matrix_p.dot(b)
+    y = []
+    x = []
+    for i in range(n):
+        k = b[i]
+        for j in range(n)[0:i]:
+            k -= matrix_l[i, j] * y[j]
+        y.append(k)
+    for i in range(n):
+        k = y[n - (i + 1)]
+        for j in range(n)[0:i]:
+            k -= matrix_u[n - (i + 1), n - (j + 1)] * x[j]
+        x.append(k / matrix_u[n - (i + 1), n - (i + 1)])
+    x.reverse()
+    for i in range(n):
+        res_x[i, 0] = x[i]
+    return matrix_q.dot(res_x)
+
+
+# Для решения системы с вырожденной матрицей
+def solve_3(L, U, P, Q, b, rank, n):
+    cU = np.copy(U)
+    g = np.linalg.inv(L).dot(P).dot(b)
+    y = np.zeros(n)
+    for i in range(rank)[::-1]:
+        g[i] = g[i] / cU[i, i]
+        cU[i, :] /= cU[i, i]
+        for j in range(i):
+            g[j] -= g[i] * cU[j, i]
+            cU[j, :] -= cU[i, :] * cU[j, i]
+        y[i] = g[i]
+    x = Q.dot(y)
+    x_res = np.zeros((n, 1))
+    for i in range(n):
+        x_res[i, 0] = x[i]
+    return x_res
+
 
 # =====
 # №1
 # =====
+print("==== №1 ======================================================================================================")
 matrix = matrix_generation(size)
 print("==== Matrix A ====================================================" + "\n", matrix)
 matrix_u, matrix_l, matrix_p, matrix_q, swaps = decompose_LU(matrix, size)
@@ -274,10 +362,12 @@ print("==== Число обусловленности А =======================
 # =====
 # №2
 # =====
-print("")
+
+
 # =====
 # №3
 # =====
+print("==== №3 ======================================================================================================")
 matrix_Q, matrix_r = decompose_QR(matrix, size)
 print("==== Q ===========================================================" + "\n", matrix_Q)
 print("==== R ===========================================================" + "\n", matrix_r)
@@ -288,6 +378,7 @@ print("==== x ===========================================================" + "\n
 # =====
 # № 4
 # =====
+print("==== №4 ======================================================================================================")
 accuracy = 1e-12
 matrix_diag = generation_matrix_diag_pred(size)
 x, apr, iterations = seidel(matrix_diag, b, accuracy, size)
@@ -317,3 +408,33 @@ x, apr, iterations = jacobi(matrix_positive, b, accuracy, size)
 print("==== Метод Якоби (X) ===========================================" + "\n", x)
 print("==== Априорная оценка ============================================" + "\n", apr)
 print("==== Количество итераций =========================================" + "\n", iterations)
+
+
+print("==== №2 ======================================================================================================")
+sing_m = singular_matrix_generation(size)
+L, U, P, Q, swps = decompose_PAQ_LU(sing_m, size)
+print("==== A ===========================================================" + "\n", sing_m)
+print("==== Matrix L ====================================================" + "\n", L)
+print("==== Matrix U ====================================================" + "\n", U)
+print("==== Проверим правильность разложения (L*U) ======================" + "\n", L.dot(U))
+print("==== Проверим правильность разложения (P*A*Q) ====================" + "\n", P.dot(sing_m).dot(Q))
+rank_U = rank(U, size)
+print("==== rank A ======================================================" + "\n", rank_U)
+expan_matr = np.zeros((size, size + 1))
+for i in range(size):
+    expan_matr[:, i] = sing_m[:, i]
+for i in range(size):
+    expan_matr[i, size] = b[i, 0]
+# Проверка на совместность по теореме Кроннекера — Капелли
+if rank_U == np.linalg.matrix_rank(expan_matr):
+    print("==== Система совместна ===========================================")
+    if rank_U == size:
+        x = system_solution_2(L, U, size, b, P, Q)
+        print("==== X ===========================================================" + "\n", x)
+        print("==== Ax ==========================================================" + "\n", sing_m.dot(x))
+    else:
+        x = solve_3(L, U, P, Q, b, rank_U, size)
+        print("==== частный X ===================================================" + "\n", x)
+        print("==== Ax ==========================================================" + "\n", sing_m.dot(x))
+else:
+    print("==== Система несовместна =========================================")
