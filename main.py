@@ -17,11 +17,22 @@ def matrix_generation(n):
     return np.random.randint(0, 10, (n, n)).astype(np.float32)
 
 
+def generation_matrix_diag_pred(n):
+    matrix_1 = np.random.uniform(0, 10, (n, n)) * (np.ones((n, n)) - np.eye(n))
+    matrix_2 = np.random.uniform(10 * n, 10 * n + 10, (n, n)) * np.eye(n)
+    return matrix_1 + matrix_2
+
+
+def generation_matrix_positive(n):
+    matrix = np.random.uniform(0, 10, (n, n))
+    return np.transpose(matrix).dot(matrix)
+
+
 def vector_generation(n):
     return np.random.randint(0, 10, (n, 1)).astype(np.float32)
 
 
-def swap(matrix, k, n):
+def swap_rows(matrix, k, n):
     matr = np.copy(matrix)
     matr[n, :] = matr[k, :]
     matr[k, :] = matrix[n, :]
@@ -52,9 +63,9 @@ def decompose_LU(matrix, n):
                 pivot = row
         if pivot != -1:
             swaps += 1
-            matrix_c = swap(matrix_c, pivot, i)
-            matrix_p = swap(matrix_p, pivot, i)
-            matrix_l = swap(matrix_l, pivot, i)
+            matrix_c = swap_rows(matrix_c, pivot, i)
+            matrix_p = swap_rows(matrix_p, pivot, i)
+            matrix_l = swap_rows(matrix_l, pivot, i)
         matrix_l[i, i] = 1
         for j in range(i + 1, n):
             coeff = matrix_c[j, i] / matrix_c[i, i]
@@ -128,25 +139,110 @@ def seidel(matrix, b, accuracy, n):
     # матрицы (matrix)
     # matrix_L - матрица, которая содержит элементы исходной, стоящие под главной диагональю
     # matrix_U - матрица, которая содержит элементы исходной, стоящие над главной диагональю
-
+    aprior = 0
+    iters = 1
     matrix_D = np.zeros((n, n))
     for i in range(n):
         matrix_D[i, i] = matrix[i, i]
     matrix_L = np.tril(matrix) - matrix_D
     matrix_U = np.triu(matrix) - matrix_D
     x_previous = np.zeros((n, 1))
+    # Введём вспомогательные матрицы В и g для оценки
+    g = np.linalg.inv(np.tril(matrix)).dot(b)
+    B = -1 * np.linalg.inv(np.tril(matrix)).dot(matrix_U)
+    q = 1
+    if np.linalg.norm(B) < 1:
+        aprior = 1 + int((np.log(accuracy) + np.log(1 - np.linalg.norm(B)) - np.log(np.linalg.norm(g))) / np.log(np.linalg.norm(B)))
+        q = np.linalg.norm(B) / (1 - np.linalg.norm(B))
+    else:
+        aprior = "Норма больше 1"
+
     # Одну итеррацию вне цикла, чтобы запустить сам цикл
     x_current = ((np.linalg.inv(matrix_L + matrix_D)).dot(-1 * matrix_U.dot(x_previous))) + (
         np.linalg.inv(matrix_L + matrix_D).dot(b))
     norma = 10000
-    while norma > accuracy:
+    while q * norma > accuracy:
+        iters += 1
         x_current = ((np.linalg.inv(matrix_L + matrix_D)).dot(-1 * matrix_U.dot(x_previous))) + (
             np.linalg.inv(matrix_L + matrix_D).dot(b))
         norma = np.linalg.norm(x_current - x_previous)
+        if norma > 10000:
+            print("==== Расходится (seidel) ====")
+            return None, None, None
         x_previous = np.copy(x_current)
 
-    return x_current
+    return x_current, aprior, iters
 
+
+def jacobi(matrix, b, accuracy, n):
+    # matrix_D - матрица на главной диагонале которой, распологаются элементы главной диагонали исходной
+    # матрицы (matrix)
+    # matrix_L - матрица, которая содержит элементы исходной, стоящие под главной диагональю
+    # matrix_R - матрица, которая содержит элементы исходной, стоящие над главной диагональю
+    aprior = 0
+    iters = 1
+    matrix_D = np.zeros((n, n))
+    for i in range(n):
+        matrix_D[i, i] = matrix[i, i]
+    matrix_L = np.tril(matrix) - matrix_D
+    matrix_R = np.triu(matrix) - matrix_D
+    x_previous = np.zeros((n, 1))
+    # Введём вспомогательные матрицы В и g для оценки
+    g = np.linalg.inv(matrix_D).dot(b)
+    B = np.eye(n) - np.linalg.inv(matrix_D).dot(matrix)
+    q = 1
+    if np.linalg.norm(B) < 1:
+        aprior = 1 + int(
+            (np.log(accuracy) + np.log(1 - np.linalg.norm(B)) - np.log(np.linalg.norm(g))) / np.log(np.linalg.norm(B)))
+        q = np.linalg.norm(B) / (1 - np.linalg.norm(B))
+    else:
+        aprior = "Норма больше 1"
+
+    # Одну итеррацию вне цикла, чтобы запустить сам цикл
+    x_current = (-1 * (np.linalg.inv(matrix_D).dot(matrix_L + matrix_R))).dot(x_previous) + (np.linalg.inv(matrix_D).dot(b))
+    norma = 10000
+    while q * norma > accuracy:
+        iters += 1
+        x_current = (-1 * (np.linalg.inv(matrix_D).dot(matrix_L + matrix_R))).dot(x_previous) + (
+            np.linalg.inv(matrix_D).dot(b))
+        norma = np.linalg.norm(x_current - x_previous)
+        if norma > 10000:
+            print("==== Расходится (jacobi) ====")
+            return None, None, None
+        x_previous = np.copy(x_current)
+
+    return x_current, aprior, iters
+
+
+def decompose_PAQ_LU(matrix, n):
+    matrix_c = np.copy(matrix)
+
+    swaps = 0
+    matrix_p = np.eye(n)
+    matrix_q = np.eye(n)
+    matrix_l = np.zeros((n, n))
+
+    for i in range(n):
+        pivot = -1
+        pivotValue = np.fabs(matrix_c[i, i])
+        for row in range(i + 1, n):
+            if np.fabs(matrix_c[row, i]) > pivotValue:
+                pivotValue = np.fabs(matrix_c[row, i])
+                pivot = row
+        if pivot != -1:
+            swaps += 1
+            matrix_c = swap_rows(matrix_c, pivot, i)
+            matrix_p = swap_rows(matrix_p, pivot, i)
+            matrix_l = swap_rows(matrix_l, pivot, i)
+        matrix_l[i, i] = 1
+        for j in range(i + 1, n):
+            coeff = matrix_c[j, i] / matrix_c[i, i]
+            matrix_l[j, i] = coeff
+            for k in range(i, n):
+                matrix_c[j, k] -= coeff * matrix_c[i, k]
+
+    matrix_u = matrix_c
+    return matrix_u, matrix_l, matrix_p, matrix_q, swaps
 
 # =====
 # №1
@@ -178,7 +274,7 @@ print("==== Число обусловленности А =======================
 # =====
 # №2
 # =====
-
+print("")
 # =====
 # №3
 # =====
@@ -193,4 +289,31 @@ print("==== x ===========================================================" + "\n
 # № 4
 # =====
 accuracy = 1e-12
-print("==== Метод Зейделя ===============================================" + "\n", seidel(matrix, b, accuracy, size))
+matrix_diag = generation_matrix_diag_pred(size)
+x, apr, iterations = seidel(matrix_diag, b, accuracy, size)
+print("==== Методы Зейделя и Якоби ======================================")
+
+print("==== Матрица с диагональным преобладанием ========================")
+print("==== A, b ========================================================" + "\n", matrix_diag, "\n", b)
+print("==== Для проверки решим систему встроенным методом ===============" + "\n", np.linalg.solve(matrix_diag, b))
+print("==== Метод Зейделя (X) ===========================================" + "\n", x)
+print("==== Априорная оценка ============================================" + "\n", apr)
+print("==== Количество итераций =========================================" + "\n", iterations)
+x, apr, iterations = jacobi(matrix_diag, b, accuracy, size)
+print("==== Метод Якоби (X) ===========================================" + "\n", x)
+print("==== Априорная оценка ============================================" + "\n", apr)
+print("==== Количество итераций =========================================" + "\n", iterations)
+
+
+matrix_positive = generation_matrix_positive(size)
+x, apr, iterations = seidel(matrix_positive, b, accuracy, size)
+print("==== Положителльно определённая матрица ==========================")
+print("==== A, b ========================================================" + "\n", matrix_positive, "\n", b)
+print("==== Для проверки решим систему встроенным методом ===============" + "\n", np.linalg.solve(matrix_positive, b))
+print("==== Метод Зейделя (X) ===========================================" + "\n", x)
+print("==== Априорная оценка ============================================" + "\n", apr)
+print("==== Количество итераций =========================================" + "\n", iterations)
+x, apr, iterations = jacobi(matrix_positive, b, accuracy, size)
+print("==== Метод Якоби (X) ===========================================" + "\n", x)
+print("==== Априорная оценка ============================================" + "\n", apr)
+print("==== Количество итераций =========================================" + "\n", iterations)
