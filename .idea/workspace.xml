@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d80c963d-66d7-451d-ac60-0bd344667ce7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/number_two.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trashcan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/number_one.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number_two.py" beforeDir="false" afterPath="$PROJECT_DIR$/number_two.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +19,7 @@
     <session id="1352978756">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="5" />
           <entry key="project.open.time.17" value="3" />
@@ -36,26 +35,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="43" />
+          <entry key="py" value="44" />
           <entry key="url" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="40" />
+          <entry key="Python" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="48" />
-          <entry key="py" value="14912" />
+          <entry key="dummy" value="160" />
+          <entry key="py" value="15586" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="133" />
-          <entry key="Python" value="14827" />
+          <entry key="PLAIN_TEXT" value="245" />
+          <entry key="Python" value="15501" />
         </counts>
       </usages-collector>
     </session>
@@ -65,8 +64,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/number_two.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4428">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="-528">
+              <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trashcan.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3553">
+              <caret line="290" column="51" selection-start-line="290" selection-start-column="51" selection-end-line="290" selection-end-column="51" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -77,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="151" column="30" selection-start-line="148" selection-end-line="171" selection-end-column="14" />
+            <state relative-caret-position="-2909">
+              <caret line="148" column="8" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -86,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/number_one.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4420">
+            <state relative-caret-position="3870">
               <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
               <folding>
                 <marker date="1589383033733" expanded="true" signature="561:644" ph="..." />
@@ -123,13 +134,14 @@
         <option value="$PROJECT_DIR$/number_one.py" />
         <option value="$PROJECT_DIR$/еуые.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/trashcan.py" />
         <option value="$PROJECT_DIR$/number_two.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="698" />
-    <option name="width" value="1229" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="886" />
+    <option name="width" value="1043" />
     <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -146,11 +158,6 @@
             <path>
               <item name="python NumMethods" type="b2602c69:ProjectViewProjectNode" />
               <item name="python NumMethods" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python NumMethods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python NumMethods" type="462c0819:PsiDirectoryNode" />
-              <item name="number_two.py" type="8704e2dd:PyFileNode" />
             </path>
           </expand>
           <select />
@@ -288,15 +295,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="559" y="0" width="983" height="870" extended-state="1" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16807611" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.019167218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.11940298" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3261745" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1328859" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -309,6 +315,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.055445544" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -376,9 +401,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/number_two_reviewed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="304" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/Lib/site-packages/numpy/lib/twodim_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2909">
+          <caret line="148" column="8" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/number_one.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4420">
+        <state relative-caret-position="3870">
           <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
           <folding>
             <marker date="1589383033733" expanded="true" signature="561:644" ph="..." />
@@ -392,34 +441,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/number_two_reviewed.py">
+    <entry file="file://$PROJECT_DIR$/trashcan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="304" />
+        <state relative-caret-position="3553">
+          <caret line="290" column="51" selection-start-line="290" selection-start-column="51" selection-end-line="290" selection-end-column="51" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="151" column="30" selection-start-line="148" selection-end-line="171" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venv/Lib/site-packages/numpy/lib/twodim_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/number_two.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4428">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="-528">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
