@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/main.py" line="347" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/number_one.py" line="347" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d80c963d-66d7-451d-ac60-0bd344667ce7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/number_two.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/number_one.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +20,10 @@
     <session id="1352978756">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
-          <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.16" value="4" />
-          <entry key="project.open.time.17" value="2" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.15" value="3" />
+          <entry key="project.open.time.16" value="5" />
+          <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.23" value="1" />
@@ -28,31 +31,31 @@
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="33" />
+          <entry key="py" value="43" />
           <entry key="url" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="31" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="25" />
-          <entry key="py" value="13120" />
+          <entry key="dummy" value="48" />
+          <entry key="py" value="14912" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="110" />
-          <entry key="Python" value="13035" />
+          <entry key="PLAIN_TEXT" value="133" />
+          <entry key="Python" value="14827" />
         </counts>
       </usages-collector>
     </session>
@@ -60,18 +63,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/number_two.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="392" column="79" selection-start-line="392" selection-start-column="79" selection-end-line="392" selection-end-column="79" />
+            <state relative-caret-position="-4428">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
-                <marker date="1588611408970" expanded="true" signature="561:644" ph="..." />
-                <marker date="1588611408970" expanded="true" signature="3563:10391" ph="..." />
-                <marker date="1588611408970" expanded="true" signature="4133:4134" ph="..." />
-                <marker date="1588611408970" expanded="true" signature="4133:4138" ph="..." />
-                <marker date="1588611408970" expanded="true" signature="4348:8872" ph="..." />
-                <marker date="1588611408970" expanded="true" signature="6041:6042" ph="..." />
-                <marker date="1588611408970" expanded="true" signature="6041:6046" ph="..." />
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="151" column="30" selection-start-line="148" selection-end-line="171" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/number_one.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4420">
+              <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
+              <folding>
+                <marker date="1589383033733" expanded="true" signature="561:644" ph="..." />
+                <marker date="1589383033733" expanded="true" signature="3563:10391" ph="..." />
+                <marker date="1589383033733" expanded="true" signature="4133:4134" ph="..." />
+                <marker date="1589383033733" expanded="true" signature="4133:4138" ph="..." />
+                <marker date="1589383033733" expanded="true" signature="4348:8872" ph="..." />
+                <marker date="1589383033733" expanded="true" signature="6041:6042" ph="..." />
+                <marker date="1589383033733" expanded="true" signature="6041:6046" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,15 +119,18 @@
         <option value="$USER_HOME$/Downloads/YakobiAndZeidel.py" />
         <option value="$PROJECT_DIR$/staff.py" />
         <option value="$PROJECT_DIR$/all.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/number_one.py" />
+        <option value="$PROJECT_DIR$/еуые.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/number_two.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1935" />
-    <option name="height" value="1089" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="698" />
+    <option name="width" value="1229" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -113,7 +140,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,10 +147,16 @@
               <item name="python NumMethods" type="b2602c69:ProjectViewProjectNode" />
               <item name="python NumMethods" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python NumMethods" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python NumMethods" type="462c0819:PsiDirectoryNode" />
+              <item name="number_two.py" type="8704e2dd:PyFileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.number_two">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python NumMethods" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,7 +187,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="D:\python NumMethods\number_one.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="number_two" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python NumMethods" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/number_two.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,12 +263,14 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python.staff" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.number_two" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.number_two" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.staff" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -233,15 +288,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1548" height="871" extended-state="0" />
+    <frame x="559" y="0" width="983" height="870" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10787558" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16807611" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.11940298" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -311,19 +366,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/staff.py" />
     <entry file="file://$PROJECT_DIR$/all.py" />
-    <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$USER_HOME$/Downloads/3-Newton-matrices.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/venv/Lib/site-packages/sympy/core/expr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="392" column="79" selection-start-line="392" selection-start-column="79" selection-end-line="392" selection-end-column="79" />
+        <state relative-caret-position="124">
+          <caret line="279" selection-start-line="279" selection-end-line="279" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/number_one.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4420">
+          <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
           <folding>
-            <marker date="1588611408970" expanded="true" signature="561:644" ph="..." />
-            <marker date="1588611408970" expanded="true" signature="3563:10391" ph="..." />
-            <marker date="1588611408970" expanded="true" signature="4133:4134" ph="..." />
-            <marker date="1588611408970" expanded="true" signature="4133:4138" ph="..." />
-            <marker date="1588611408970" expanded="true" signature="4348:8872" ph="..." />
-            <marker date="1588611408970" expanded="true" signature="6041:6042" ph="..." />
-            <marker date="1588611408970" expanded="true" signature="6041:6046" ph="..." />
+            <marker date="1589383033733" expanded="true" signature="561:644" ph="..." />
+            <marker date="1589383033733" expanded="true" signature="3563:10391" ph="..." />
+            <marker date="1589383033733" expanded="true" signature="4133:4134" ph="..." />
+            <marker date="1589383033733" expanded="true" signature="4133:4138" ph="..." />
+            <marker date="1589383033733" expanded="true" signature="4348:8872" ph="..." />
+            <marker date="1589383033733" expanded="true" signature="6041:6042" ph="..." />
+            <marker date="1589383033733" expanded="true" signature="6041:6046" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/number_two_reviewed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="304" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="151" column="30" selection-start-line="148" selection-end-line="171" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/Lib/site-packages/numpy/lib/twodim_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/number_two.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4428">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

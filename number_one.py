@@ -273,7 +273,7 @@ def decompose_PAQ_LU(matrix, n):
     return matrix_l, matrix_u, matrix_p, matrix_q, swaps
 
 
-def rank(matrix, n):
+def rang(matrix, n):
     rank = n
     for row in range(n):
         if zeros(matrix[n - 1 - row], n):
@@ -371,7 +371,7 @@ print("==== Matrix L ====================================================" + "\n
 print("==== Matrix U ====================================================" + "\n", U)
 print("==== Проверим правильность разложения (L*U) ======================" + "\n", L.dot(U))
 print("==== Проверим правильность разложения (P*A*Q) ====================" + "\n", P.dot(sing_m).dot(Q))
-rank_U = rank(U, size)
+rank_U = rang(U, size)
 print("==== rank A ======================================================" + "\n", rank_U)
 expan_matr = np.zeros((size, size + 1))
 for i in range(size):
