@@ -173,9 +173,9 @@ def jacobian(a):
 
 
 def SLAE_solve(matrix, _b, n):
-    L, U, P, Q, swaps = decompose_PAQ_LU(list(matrix), n)
+    matrix_l, matrix_u, matrix_p, matrix_q, swaps = decompose_PAQ_LU(list(matrix), n)
     # swaps не нужны
-    rank = rang(U, n)
+    rank = rang(matrix_u, n)
     Ab = np.zeros((n, n + 1))
     x = []
     count = 0
@@ -184,9 +184,9 @@ def SLAE_solve(matrix, _b, n):
     Ab[:, n] = np.copy(_b)
     if np.linalg.matrix_rank(Ab) == rank:
         if rank == n:
-            x, count = system_solution_2(L, U, P, Q, _b, n)
+            x, count = system_solution_2(matrix_l, matrix_u, matrix_p, matrix_q, _b, n)
         else:
-            x, count = solve_3(L, U, P, Q, _b, rank, n)
+            x, count = solve_3(matrix_l, matrix_u, matrix_p, matrix_q, _b, rank, n)
     return x, count
 
 
@@ -213,11 +213,11 @@ def modified_newton_method(f, j, x0, n, accuracy):
     t = time.time()
     norm = 1000
     matrix = j(x_cur)
-    L, U, P, Q, swaps = decompose_PAQ_LU(list(matrix), n)
+    matrix_l, matrix_u, matrix_p, matrix_q, swaps = decompose_PAQ_LU(list(matrix), n)
     # swaps не нужны
     while norm > accuracy:
         _b = -f(x_cur)
-        rank = rang(U, n)
+        rank = rang(matrix_u, n)
         Ab = np.zeros((n, n + 1))
         apr_x = []
         count = 0
@@ -226,9 +226,9 @@ def modified_newton_method(f, j, x0, n, accuracy):
         Ab[:, n] = np.copy(_b)
         if np.linalg.matrix_rank(Ab) == rank:
             if rank == n:
-                apr_x, count = system_solution_2(L, U, P, Q, _b, n)
+                apr_x, count = system_solution_2(matrix_l, matrix_u, matrix_p, matrix_q, _b, n)
             else:
-                apr_x, count = solve_3(L, U, P, Q, _b, rank, n)
+                apr_x, count = solve_3(matrix_l, matrix_u, matrix_p, matrix_q, _b, rank, n)
         operation_num += count
         iter_num += 1
         norm = np.linalg.norm(apr_x, np.inf)
@@ -252,26 +252,26 @@ def newton_method_with_change(f, j, x0, n, k, accuracy):
     return x_cur, iter_num + itn, operation_num + opn, duration
 
 
-def newton_method_with_period(f, j, x0, period, n):
+def newton_method_with_period(f, j, x0, n, period_given, accuracy):
     x_cur = x0
     iter_num = 0
     operation_num = 0
     t = time.time()
     norm = 1000
     matrix = j(x_cur)
-    L, U, P, Q, swaps = decompose_PAQ_LU(list(matrix), n)
+    matrix_l, matrix_u, matrix_p, matrix_q, swaps = decompose_PAQ_LU(list(matrix), n)
     # swaps не нужны
     period = 0
     while norm > accuracy:
         period += 1
-        if period == period:
+        if period == period_given:
             matrix = j(x_cur)
-            L, U, P, Q, swaps = decompose_PAQ_LU(list(matrix), n)
+            matrix_l, matrix_u, matrix_p, matrix_q, swaps = decompose_PAQ_LU(list(matrix), n)
             # swaps не нужны
             period = 0
         iter_num += 1
         _b = -f(x_cur)
-        rank = rang(U, n)
+        rank = rang(matrix_u, n)
         Ab = np.zeros((n, n + 1))
         apr_x = []
         count = 0
@@ -280,9 +280,9 @@ def newton_method_with_period(f, j, x0, period, n):
         Ab[:, n] = np.copy(_b)
         if np.linalg.matrix_rank(Ab) == rank:
             if rank == n:
-                apr_x, count = system_solution_2(L, U, P, Q, _b, n)
+                apr_x, count = system_solution_2(matrix_l, matrix_u, matrix_p, matrix_q, _b, n)
             else:
-                apr_x, count = solve_3(L, U, P, Q, _b, rank, n)
+                apr_x, count = solve_3(matrix_l, matrix_u, matrix_p, matrix_q, _b, rank, n)
         operation_num += count
         norm = np.linalg.norm(apr_x, np.inf)
         x_cur = apr_x + x_cur
@@ -299,15 +299,51 @@ print("==== X ==================================================================
 print("==== Количество операций =========================================================================" + "\n", u)
 print("==== Количество итераций =========================================================================" + "\n", i)
 print("==== Время =======================================================================================" + "\n", d)
+print(" ")
 x, i, u, d = modified_newton_method(func, jacobian, x_0, size, accuracy)
 print("==== Модифицированный Метод Ньюьона ==============================================================")
 print("==== X ===========================================================================================" + "\n", x)
 print("==== Количество операций =========================================================================" + "\n", u)
 print("==== Количество итераций =========================================================================" + "\n", i)
 print("==== Время =======================================================================================" + "\n", d)
+print(" ")
 k = 2
 x, i, u, d = newton_method_with_change(func, jacobian, x_0, size, k, accuracy)
-print("==== Модифицированный Метод Ньюьона ==============================================================")
+print("==== Метод Ньютона переходящий на Модифицированный Метод Ньюьона (после к-ой итерации) ===========")
+print("==== X ===========================================================================================" + "\n", x)
+print("==== Количество операций =========================================================================" + "\n", u)
+print("==== Количество итераций =========================================================================" + "\n", i)
+print("==== Время =======================================================================================" + "\n", d)
+print(" ")
+p = 5
+x, i, u, d = newton_method_with_period(func, jacobian, x_0, size, p, accuracy)
+print("==== Метод Ньютона с подсчетом якобиана каждые Р итераций ========================================")
+print("==== X ===========================================================================================" + "\n", x)
+print("==== Количество операций =========================================================================" + "\n", u)
+print("==== Количество итераций =========================================================================" + "\n", i)
+print("==== Время =======================================================================================" + "\n", d)
+print(" ")
+
+# Рассмотрим новый Х_о
+x_0 = np.array([0.5, 0.5, 1.5, -1, -0.2, 1.5, 0.5, -0.5, 1.5, -1.5])
+print("==== Рассмотрим новый X_o ========================================================================")
+print(str(x_0))
+x, i, u, d = newton_method(func, jacobian, x_0, size, accuracy)
+print("==== Метод Ньюьона ===============================================================================")
+print("==== X ===========================================================================================" + "\n", x)
+print("==== Количество операций =========================================================================" + "\n", u)
+print("==== Количество итераций =========================================================================" + "\n", i)
+print("==== Время =======================================================================================" + "\n", d)
+print(" ")
+print("==== Модифицированный Метод Ньюьона расходится ===================================================")
+print(" ")
+
+# Рассмотрим теперь Метод Ньютона переходящий на Модифицированный Метод Ньюьона (после к-ой итерации) с разными К
+# Из-за особенности написания программы буду рассматривать не предлженные значения К, а значения на единицу меньшие.
+# При К < 6 метод расходится, поэтому вывод не делаю. При К >= 6 метод работтает. Вывод представлен.
+k = 6
+x, i, u, d = newton_method_with_change(func, jacobian, x_0, size, k, accuracy)
+print("==== Метод Ньютона переходящий на Модифицированный Метод Ньюьона (после к-ой итерации) ===========")
 print("==== X ===========================================================================================" + "\n", x)
 print("==== Количество операций =========================================================================" + "\n", u)
 print("==== Количество итераций =========================================================================" + "\n", i)
