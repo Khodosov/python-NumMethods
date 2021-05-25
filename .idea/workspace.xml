@@ -1,102 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/number_one.py" line="347" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/NumMethods_2nd/newton.py" line="21" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d80c963d-66d7-451d-ac60-0bd344667ce7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/number_two.py" beforeDir="false" afterPath="$PROJECT_DIR$/number_two.py" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="d80c963d-66d7-451d-ac60-0bd344667ce7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1352978756">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="19" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.15" value="3" />
-          <entry key="project.open.time.16" value="5" />
-          <entry key="project.open.time.17" value="3" />
-          <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="21" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="47" />
-          <entry key="url" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="41" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="160" />
-          <entry key="py" value="16530" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="245" />
-          <entry key="Python" value="16445" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/number_two.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="364" column="10" selection-start-line="364" selection-start-column="10" selection-end-line="364" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/number_one.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
-              <folding>
-                <marker date="1589383033733" expanded="true" signature="561:644" ph="..." />
-                <marker date="1589383033733" expanded="true" signature="3563:10391" ph="..." />
-                <marker date="1589383033733" expanded="true" signature="4133:4134" ph="..." />
-                <marker date="1589383033733" expanded="true" signature="4133:4138" ph="..." />
-                <marker date="1589383033733" expanded="true" signature="4348:8872" ph="..." />
-                <marker date="1589383033733" expanded="true" signature="6041:6042" ph="..." />
-                <marker date="1589383033733" expanded="true" signature="6041:6046" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -114,14 +43,28 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/trashcan.py" />
         <option value="$PROJECT_DIR$/number_two.py" />
+        <option value="$PROJECT_DIR$/NumMethods_2nd/lagranj.py" />
+        <option value="$PROJECT_DIR$/NumMethods_2nd/lagrange.py" />
+        <option value="$PROJECT_DIR$/NumMethods_2nd/newton.py" />
+        <option value="$PROJECT_DIR$/NumMethods_2nd/eitkin.py" />
+        <option value="$PROJECT_DIR$/NumMethods_2nd/ermit.py" />
+        <option value="$PROJECT_DIR$/NumMethods_S3T1/integration.py" />
+        <option value="$PROJECT_DIR$/NumMethods_S3T1/test_quads.py" />
+        <option value="$PROJECT_DIR$/NumMethods_S3T1/variants.py" />
+        <option value="$PROJECT_DIR$/NumMethods_S3T1/test_composites.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1089" />
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1098" />
+  </component>
+  <component name="ProjectId" id="1qWngWUpL0VQ8nQ1TWgc2Ug5jqV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -137,6 +80,11 @@
               <item name="python NumMethods" type="b2602c69:ProjectViewProjectNode" />
               <item name="python NumMethods" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python NumMethods" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python NumMethods" type="462c0819:PsiDirectoryNode" />
+              <item name="NumMethods_S3T1" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -144,121 +92,128 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python NumMethods\NumMethods_S3T2" />
+      <recent name="D:\python NumMethods\utils" />
+      <recent name="D:\python NumMethods\NumMethods_1st" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.number_two">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.pytest for test_adap_step.test_adaptive_order">
+    <configuration name="pytest for test_adap_step.test_adaptive" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python NumMethods" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NumMethods_S3T2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\python NumMethods\number_one.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_adap_step.test_adaptive&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="number_two" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pytest for test_adap_step.test_adaptive_order" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python NumMethods" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NumMethods_S3T2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/number_two.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_adap_step.test_adaptive_order&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="staff" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pytest for test_adap_step.test_arenstorf" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python NumMethods" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NumMethods_S3T2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/staff.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_adap_step.test_arenstorf&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pytest for test_fix_step.test_multi_step" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python NumMethods" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NumMethods_S3T2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fix_step.test_multi_step&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_stiff.test_stiff" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python NumMethods" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NumMethods_S3T2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_stiff.test_stiff&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.staff" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.number_two" />
+      <item itemvalue="Python tests.pytest for test_fix_step.test_multi_step" />
+      <item itemvalue="Python tests.pytest for test_adap_step.test_adaptive" />
+      <item itemvalue="Python tests.pytest for test_adap_step.test_adaptive_order" />
+      <item itemvalue="Python tests.pytest for test_adap_step.test_arenstorf" />
+      <item itemvalue="Python tests.pytest for test_stiff.test_stiff" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.number_two" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.staff" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest for test_adap_step.test_adaptive_order" />
+        <item itemvalue="Python tests.pytest for test_stiff.test_stiff" />
+        <item itemvalue="Python tests.pytest for test_adap_step.test_arenstorf" />
+        <item itemvalue="Python tests.pytest for test_adap_step.test_adaptive" />
+        <item itemvalue="Python tests.pytest for test_fix_step.test_multi_step" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -269,43 +224,71 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587044626329</updated>
+      <workItem from="1617204329360" duration="2275000" />
+      <workItem from="1617206833212" duration="2247000" />
+      <workItem from="1617274648202" duration="162000" />
+      <workItem from="1617296900060" duration="2285000" />
+      <workItem from="1617539345751" duration="1994000" />
+      <workItem from="1617541468791" duration="2242000" />
+      <workItem from="1617711226410" duration="10045000" />
+      <workItem from="1617888216331" duration="3828000" />
+      <workItem from="1617903235045" duration="1476000" />
+      <workItem from="1618066771408" duration="4983000" />
+      <workItem from="1618248550396" duration="6729000" />
+      <workItem from="1618405421486" duration="5472000" />
+      <workItem from="1618413552465" duration="166000" />
+      <workItem from="1618502682315" duration="261000" />
+      <workItem from="1618756567526" duration="1268000" />
+      <workItem from="1618826020577" duration="5450000" />
+      <workItem from="1619000152272" duration="4212000" />
+      <workItem from="1619258430826" duration="5456000" />
+      <workItem from="1620564265989" duration="8070000" />
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14937212" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19283456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3261745" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3865772" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32120582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32952183" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.43866944" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952183" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.055445544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.014784946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3261745" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27815467" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32971507" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -313,8 +296,33 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_composites_test_composite_quad_degree.coverage" NAME="pytest for test_composites.test_composite_quad_degree Coverage Results" MODIFIED="1620572075078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_adap_step_test_adaptive_order.coverage" NAME="pytest for test_adap_step.test_adaptive_order Coverage Results" MODIFIED="1620575446577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T2" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_fix_step_test_multi_step.coverage" NAME="pytest for test_fix_step.test_multi_step Coverage Results" MODIFIED="1620572773947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T2" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_composites_test_quad_vs_cq.coverage" NAME="pytest for test_composites.test_quad_vs_cq Coverage Results" MODIFIED="1618407889467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_quads_test_interpolation.coverage" NAME="pytest for test_quads.test_interpolation Coverage Results" MODIFIED="1618408561409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_adap_step_test_arenstorf.coverage" NAME="pytest for test_adap_step.test_arenstorf Coverage Results" MODIFIED="1620574403552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T2" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_quads_test_quad_degree.coverage" NAME="pytest for test_quads.test_quad_degree Coverage Results" MODIFIED="1618413625765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_adap_step_test_adaptive.coverage" NAME="pytest for test_adap_step.test_adaptive Coverage Results" MODIFIED="1620573251071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T2" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$eitkin.coverage" NAME="eitkin Coverage Results" MODIFIED="1617204654907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_2nd" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$number_one.coverage" NAME="number_one Coverage Results" MODIFIED="1617206220065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_1st" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_composites_test_integrate.coverage" NAME="pytest for test_composites.test_integrate Coverage Results" MODIFIED="1620572129681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_composites_test_composite_quad.coverage" NAME="pytest for test_composites.test_composite_quad Coverage Results" MODIFIED="1620570954991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_quads_test_weighted_quad_degree.coverage" NAME="pytest for test_quads.test_weighted_quad_degree Coverage Results" MODIFIED="1618409315821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$integration.coverage" NAME="integration Coverage Results" MODIFIED="1617204701899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$kek.coverage" NAME="kek Coverage Results" MODIFIED="1617205700743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$test_quads.coverage" NAME="test_quads Coverage Results" MODIFIED="1617890185478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$test_composites.coverage" NAME="test_composites Coverage Results" MODIFIED="1617903280775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_quads_test_quad_gauss_degree.coverage" NAME="pytest for test_quads.test_quad_gauss_degree Coverage Results" MODIFIED="1618409442924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T1" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_fix_step_test_one_step.coverage" NAME="pytest for test_fix_step.test_one_step Coverage Results" MODIFIED="1620572184310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T2" />
+    <SUITE FILE_PATH="coverage/python_NumMethods$pytest_for_test_stiff_test_stiff.coverage" NAME="pytest for test_stiff.test_stiff Coverage Results" MODIFIED="1620574685838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NumMethods_S3T2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
@@ -324,21 +332,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/main_reviewed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/main_reviewed.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/doc412947255_549688418.url" />
-    <entry file="file://$USER_HOME$/Downloads/main_with_L_swap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/main_with_L_swap.py" />
     <entry file="file://$USER_HOME$/venv/Lib/site-packages/numpy/matrixlib/defmatrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -346,20 +342,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/YakobiAndZeidel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="71" lean-forward="true" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/LU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="209" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/YakobiAndZeidel.py" />
+    <entry file="file://$USER_HOME$/Downloads/LU.py" />
     <entry file="file://$USER_HOME$/venv/Lib/site-packages/numpy/linalg/linalg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -369,9 +353,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/staff.py" />
     <entry file="file://$PROJECT_DIR$/all.py" />
-    <entry file="file://$USER_HOME$/Downloads/3-Newton-matrices.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/3-Newton-matrices.py" />
     <entry file="file://$USER_HOME$/venv/Lib/site-packages/sympy/core/expr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -379,13 +361,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/number_two_reviewed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="304" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/number_two_reviewed.py" />
     <entry file="file://$USER_HOME$/venv/Lib/site-packages/numpy/lib/twodim_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -395,29 +371,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trashcan.py" />
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/number_one.py">
+    <entry file="file://$PROJECT_DIR$/number_one.py" />
+    <entry file="file://$PROJECT_DIR$/number_two.py" />
+    <entry file="file://$PROJECT_DIR$/NumMethods_2nd/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/NumMethods_1st/number_two.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
+        <state relative-caret-position="-3213" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_2nd/newton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_2nd/eitkin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_2nd/ermit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_2nd/lagrange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_1st/number_one.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6209" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_S3T1/variants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_S3T1/test_quads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="135" column="14" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="14" />
           <folding>
-            <marker date="1589383033733" expanded="true" signature="561:644" ph="..." />
-            <marker date="1589383033733" expanded="true" signature="3563:10391" ph="..." />
-            <marker date="1589383033733" expanded="true" signature="4133:4134" ph="..." />
-            <marker date="1589383033733" expanded="true" signature="4133:4138" ph="..." />
-            <marker date="1589383033733" expanded="true" signature="4348:8872" ph="..." />
-            <marker date="1589383033733" expanded="true" signature="6041:6042" ph="..." />
-            <marker date="1589383033733" expanded="true" signature="6041:6046" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/number_two.py">
+    <entry file="file://$PROJECT_DIR$/NumMethods_S3T1/integration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="364" column="10" selection-start-line="364" selection-start-column="10" selection-end-line="364" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1224">
+          <caret line="72" column="65" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NumMethods_S3T1/test_composites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
         </state>
       </provider>
     </entry>
